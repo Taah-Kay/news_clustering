@@ -10,7 +10,7 @@ def load_clustered_data():
 # Streamlit app function
 def main():
 
-    st.title("News Articles Clusters")
+    st.title("News Articles Clustering")
 
     # Load the clustered dataframe
     data = load_clustered_data()
@@ -20,9 +20,9 @@ def main():
 
     selected_cluster = st.sidebar.selectbox("Select Category", categories)
 
-    st.header(f"Cluster{selected_cluster}")
+    st.header(f"Cluster { selected_cluster}")
 
-    cluster_articles = data[data['Cluster'] == selected_cluster]
+    cluster_articles = data[data['clusters'] == selected_cluster]
 
     for idx, row in cluster_articles.iterrows():
         st.markdown(f"{row['Title']}")
