@@ -20,7 +20,7 @@ def main():
 
     selected_cluster = st.sidebar.selectbox("Select Category", categories)
 
-    st.header(f"Cluster { selected_cluster}")
+    st.header(f"Cluster: { selected_cluster}")
 
     cluster_articles = data[data['Category'] == selected_cluster]
 
