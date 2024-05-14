@@ -22,7 +22,7 @@ def main():
 
     st.header(f"Cluster { selected_cluster}")
 
-    cluster_articles = data[data['clusters'] == selected_cluster]
+    cluster_articles = data[data['Category'] == selected_cluster]
 
     for idx, row in cluster_articles.iterrows():
         st.markdown(f"{row['Title']}")
